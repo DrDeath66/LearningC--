@@ -56,7 +56,7 @@ void List::add_item()
 void List::delete_item()
 {
     cout << "*** Delete Item ***\n"
-    << "Select an item index number to delete\n";
+    << "Select an item index number to delete: \n";
 
     if (list.size()) 
     {
@@ -64,6 +64,9 @@ void List::delete_item()
         {
             cout << i << ": " << list[i] << "\n";
         }
+        int choice_num;
+        cin >> choice_num;
+        list.erase(list.begin()+choice_num);
     }
     else
     {
